@@ -2,6 +2,24 @@ body {
 	background-image: url("../../assets/images/cave.jpg");
 	background-size: 100%;
 	color: white;
+	font-family: 'Cabin Sketch', cursive;
+}
+
+h1 {
+	padding-top: 20px;
+	opacity: 1;
+}
+
+.page-header {
+	background-color: black;
+	opacity: 0.6;
+	border-bottom: 0;
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: black;
+	opacity: 0.6;
 }
 
 .crystal-image {

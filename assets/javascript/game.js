@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$("#random-number").text(targetNumber);
 
 	for (var i = 0; i < crystalNumbers.length; i++) {
-		var crystal = $("<img>");
+		var crystal = $("<img>");	
 		crystal.addClass("crystal-image");
 		crystal.attr("src", "assets/images/purple.gif");
 		crystal.attr("data-crystalvalue", crystalNumbers[i]);
@@ -23,20 +23,19 @@ $(document).ready(function() {
 		var crystalValue = ($(this).attr("data-crystalvalue"));
     	crystalValue = parseInt(crystalValue);
     	counter += crystalValue;
-    	alert("New score: " + counter);
+    	$("#userGuess").text(counter);
 
 	    if (counter === targetNumber) {
 	  	gameScore ++;
-	      alert("You win!");
-	      counter: 0;
-	      reset();
+	      $("#crystals").remove();
+	      $("h1").text("You win!");
+	      $("#play").append("<br><button onclick='reloadPage()'>Play Again!</button>");
 	    }
 
-	    else if (counter >= targetNumber) {
+	    else if (counter > targetNumber) {
 	    gameLife -= 1;
-	      alert("You lose!!");
 	      $("#crystals").remove();
-	      $("h1").text("Life is short"); //Game over
+	      $("h1").text("Better luck next time"); //Game over
 	      $("#play").append("<br><button onclick='reloadPage()'>Play Again!</button>");
 	    }
 	});
