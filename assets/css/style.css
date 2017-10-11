@@ -1,0 +1,10 @@
+body {
+	background-image: url("../../assets/images/cave.jpg");
+	background-size: 100%;
+	color: white;
+}
+
+.crystal-image {
+  	width: 100px;
+  	height: 100px;
+}
