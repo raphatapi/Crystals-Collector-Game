@@ -3,19 +3,20 @@ var minNumber = 47;
 var maxNumber = 103;
 var targetNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
 var counter = 0;
-var crystalNumbers = [4, 2, 8, 9];
+var gameScore = 0;
+var gameLife = 3;
+var crystalNumbers = [4, 2, 8, 13];
 
 
 $(document).ready(function() {
 	$("#random-number").text(targetNumber);
-	console.log(targetNumber);
 
 	for (var i = 0; i < crystalNumbers.length; i++) {
-		var purple = $("<img>");
-		purple.addClass("crystal-image");
-		purple.attr("src", "assets/images/purple.gif");
-		purple.attr("data-crystalvalue", crystalNumbers[i]);
-		$("#crystals").append(purple);
+		var crystal = $("<img>");
+		crystal.addClass("crystal-image");
+		crystal.attr("src", "assets/images/purple.gif");
+		crystal.attr("data-crystalvalue", crystalNumbers[i]);
+		$("#crystals").append(crystal);
 	}
 
 	$(".crystal-image").on("click", function() {
@@ -25,12 +26,26 @@ $(document).ready(function() {
     	alert("New score: " + counter);
 
 	    if (counter === targetNumber) {
+	  	gameScore ++;
 	      alert("You win!");
+	      counter: 0;
+	      reset();
 	    }
 
 	    else if (counter >= targetNumber) {
+	    gameLife -= 1;
 	      alert("You lose!!");
+	      $("#crystals").remove();
+	      $("h1").text("Life is short"); //Game over
+	      $("#play").append("<br><button onclick='reloadPage()'>Play Again!</button>");
 	    }
 	});
+
+	$("#score").text(gameScore);
+	$("#life").text(gameLife);
+
 });
 
+function reloadPage() {
+    location.reload();
+}
