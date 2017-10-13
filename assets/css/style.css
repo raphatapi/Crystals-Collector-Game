@@ -3,11 +3,21 @@ body {
 	background-size: 100%;
 	color: white;
 	font-family: 'Cabin Sketch', cursive;
+	min-height: 100%;
 }
 
 h1 {
 	padding-top: 20px;
 	opacity: 1;
+	font-weight: bold;
+}
+
+h2 {
+	margin-top: 10px;
+}
+
+p {
+	margin-bottom: 0;
 }
 
 .page-header {
@@ -15,6 +25,7 @@ h1 {
 	opacity: 0.6;
 	border-bottom: 0;
 	text-align: center;
+	border-radius: 6px;
 }
 
 .jumbotron {
@@ -22,13 +33,29 @@ h1 {
 	opacity: 0.6;
 }
 
-/*#crystals {
-	width: 100%;
-}*/
+#theme-button {
+	font-weight: bold;
+	opacity: 1.0;
+}
+
+#crystals {
+	margin-bottom: 50px;
+}
 
 .crystal-image {
   	width: 100px;
   	height: 100px;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -42,6 +69,15 @@ h1 {
 
 	h1 {
 		font-size: 50px;
+	}
+
+	.page-header {
+		margin-top: 20px;
+	}
+
+	.jumbotron {
+		margin-bottom: 10px;
+		padding: 15px;
 	}
 
 	.crystal-image {
