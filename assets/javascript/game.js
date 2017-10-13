@@ -54,7 +54,7 @@ function game(gameScore, gameLife) {
 	      $("#crystals").remove();
 	      $("h1").text("You win!");
 	      displayValues();
-	      $("#play").append("<br><button onclick='game(gameScore, gameLife)'>Play Again!</button>");
+	      $("#play").append("<br><button onclick='game()'>Play Again!</button>");
 	    }
 
 	    else if (counter > targetNumber) {
@@ -62,7 +62,7 @@ function game(gameScore, gameLife) {
 	      $("#crystals").remove();
 	      $("h2").text("Better luck next time"); //Game over
 	      displayValues();
-	      $("#play").append("<br><button onclick='game(gameScore, gameLife)'>Play Again!</button>");
+	      $("#play").append("<br><button onclick='game()'>Play Again!</button>");
 	    }
 	});
 }
