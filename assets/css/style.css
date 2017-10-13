@@ -1,5 +1,5 @@
 body {
-	background-image: url("../../assets/images/cave.jpg");
+	background-image: url("../../assets/images/cave3.jpg");
 	background-size: 100%;
 	color: white;
 	font-family: 'Cabin Sketch', cursive;
@@ -11,18 +11,75 @@ h1 {
 }
 
 .page-header {
-	background-color: black;
-	opacity: 0.6;
+	/*background-color: black;
+	opacity: 0.6;*/
 	border-bottom: 0;
 	text-align: center;
 }
 
 .jumbotron {
-	background-color: black;
-	opacity: 0.6;
+	background-color: transparent;
+	/*opacity: 0.6;*/
 }
+
+/*#crystals {
+	width: 100%;
+}*/
 
 .crystal-image {
   	width: 100px;
   	height: 100px;
 }
+
+@media (max-width: 768px) {
+	body {
+		background-image: url("../../assets/images/cave3.gif") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	.crystal-image {
+	  	width: 75px;
+	  	height: 75px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-image: url("../../assets/images/cave3.gif") no-repeat center center bottom fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+
+	.jumbotron {
+		padding: 15px!important;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	body {
+		background-image: url("../../assets/images/cave3.gif") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	body {
+		background-image: url("../../assets/images/cave3.gif") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+}	
