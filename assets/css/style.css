@@ -26,6 +26,7 @@ p {
 	border-bottom: 0;
 	text-align: center;
 	border-radius: 6px;
+	margin-top: 20px;
 }
 
 .jumbotron {
@@ -34,6 +35,18 @@ p {
 }
 
 #theme-button {
+	font-weight: bold;
+	opacity: 1.0;
+	margin-bottom: 15px;
+}
+
+#play {
+	font-weight: bold;
+	opacity: 1.0;
+	margin-bottom: 15px;
+}
+
+#reset {
 	font-weight: bold;
 	opacity: 1.0;
 }
@@ -83,6 +96,10 @@ footer {
 	.crystal-image {
 	  	width: 75px;
 	  	height: 75px;
+	}
+
+	#reset {
+		margin-bottom: 50px;
 	}
 }
 
