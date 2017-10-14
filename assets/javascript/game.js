@@ -1,13 +1,13 @@
-// Randomly picks a number from 47 to 103 and sets it as the target number
-var minNumber = 47;
-var maxNumber = 104;
+// Randomly picks a number from 19 to 120 and sets it as the target number
+// var minNumber = 19;
+// var maxNumber = 120;
 var randomize = function getRandomInt(minNumber, maxNumber) {
     return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
 };
 var counter = 0;
 var gameScore = 0;
 var gameLife = 3;
-var targetNumber = randomize(47, 110);
+var targetNumber = randomize(19, 120);
 var gemValue1 = randomize(1, 5);
 var gemValue2 = randomize(4, 8);
 var gemValue3 = randomize(7, 11);
@@ -48,17 +48,16 @@ function playAgain() {
 		counter = 0;
 		$("#userGuess").text(counter);
 		$("#gem").show();
-		targetNumber = randomize(47, 110);
-		gemValue1 = randomize(1, 5);
-		gemValue2 = randomize(4, 8);
-		gemValue3 = randomize(7, 11);
-		gemValue4 = randomize(10, 14);
+		targetNumber = randomize(19, 120);
+		gemValue1 = randomize(1, 3);
+		gemValue2 = randomize(4, 6);
+		gemValue3 = randomize(7, 9);
+		gemValue4 = randomize(10, 12);
 		$("#random-number").text(targetNumber);
 		$("#purple").attr("data-crystalvalue", gemValue1);
 		$("#pink").attr("data-crystalvalue", gemValue2);
 		$("#ruby").attr("data-crystalvalue", gemValue3);
-		$("#diamond").attr("data-crystalvalue", gemValue4);
-	
+		$("#diamond").attr("data-crystalvalue", gemValue4);	
 	});
 };
 
@@ -73,7 +72,7 @@ function displayValues(gameScore, gameLife) {
 
 function game(gameScore, gameLife) {
 	displayValues(gameScore, gameLife);
-	
+	$("#userGuess").text(counter);
 	$("#random-number").text(targetNumber);
 	$("#purple").attr("data-crystalvalue", gemValue1);
 	$("#pink").attr("data-crystalvalue", gemValue2);
@@ -102,6 +101,7 @@ function game(gameScore, gameLife) {
 	      	$("#gem").hide();
 		    $("h2").text("Game Over!");
 		    displayValues(gameScore, gameLife);
+		    $("#play").hide();
 		    $("#reset").append("<br><button class='btn btn-primary btn-center'onclick='reloadPage()'>Reset</button>");
 	      };
 	    };

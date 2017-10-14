@@ -49,6 +49,7 @@ p {
 #reset {
 	font-weight: bold;
 	opacity: 1.0;
+	vertical-align: middle;
 }
 
 #crystals {
